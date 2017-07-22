@@ -5,15 +5,70 @@
     <title>Title</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <div class="map-page">
             <div id="map">
             </div>
-            <div class="flex s-between">
-                <div class="menu-button std-but"></div>
-                <div class="menu-button std-but"></div>
+            <div class="flex s-between top-buttons">
+                <div class="menu-button std-but">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+                <div class="menu-button std-but">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="bot-cont-wrap">
+                <div class="bot-cont open">
+                    <div class="tabs-cont">
+                        <div class="tabs-content">
+
+                        </div>
+                        <div class="tab-sel">
+                            <a href="javascript:void(0);" class="one-tab">
+                                <div class="img-cont">
+                                    <svg version="1.1" id="Shape_1_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                         viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                                        <g id="Shape_1">
+                                            <g>
+                                                <path d="M354,217.9c4.5,0,8.2-3.7,8.2-8.2c0-58.6-47.6-106.2-106.2-106.2s-106.2,47.6-106.2,106.2c0,4.5,3.7,8.2,8.2,8.2
+                                                    c4.5,0,8.2-3.7,8.2-8.2c0-49.5,40.3-89.9,89.9-89.9s89.9,40.3,89.9,89.9C345.9,214.2,349.5,217.9,354,217.9z M256,136.2
+                                                    c-40.5,0-73.5,33-73.5,73.5c0,4.5,3.7,8.2,8.2,8.2s8.2-3.7,8.2-8.2c0-31.5,25.7-57.2,57.2-57.2s57.2,25.7,57.2,57.2
+                                                    c0,4.5,3.7,8.2,8.2,8.2c4.5,0,8.2-3.7,8.2-8.2C329.5,169.2,296.5,136.2,256,136.2z M503.8,234.2H8.2c-4.5,0-8.2,3.7-8.2,8.2V286
+                                                    c0,2.7,1.4,5.3,3.6,6.8l163.7,110c5.1,3.9,9.7,13,9.7,19.4v81.7c0,4.5,3.7,8.2,8.2,8.2h141.6c4.5,0,8.2-3.7,8.2-8.2v-81.7
+                                                    c0-6.3,4.6-15.5,9.7-19.4l163.7-110c2.3-1.5,3.6-4.1,3.6-6.8v-43.6C512,237.9,508.3,234.2,503.8,234.2z M495.7,277.8H158
+                                                    c-4.5,0-8.2,3.7-8.2,8.2c0,4.5,3.7,8.2,8.2,8.2H477l-141.6,95.2c-0.1,0.1-0.2,0.1-0.3,0.2c-9.4,6.9-16.5,21-16.5,32.6v73.5H193.4
+                                                    v-73.5c0-11.7-7.1-25.7-16.5-32.6c-0.1-0.1-0.2-0.1-0.3-0.2L35,294.2h90.3c4.5,0,8.2-3.7,8.2-8.2c0-4.5-3.7-8.2-8.2-8.2H16.3
+                                                    v-27.2h479.3V277.8z M215.5,414h81c4.5,0,8.2-3.7,8.2-8.2c0-4.5-3.7-8.2-8.2-8.2h-81c-4.5,0-8.2,3.7-8.2,8.2
+                                                    C207.3,410.3,211,414,215.5,414z M54.3,217.9c4.5,0,8.2-3.7,8.2-8.2v-25.4l35.1-3.3c3.5-0.3,6.4-2.9,7.2-6.3
+                                                    c3.8-16.6,10.4-32.5,19.5-47c1.9-3,1.6-6.8-0.6-9.5L101,91.1l36-36l27.1,22.5c2.7,2.3,6.6,2.5,9.6,0.6
+                                                    c14.6-9.1,30.4-15.8,47.1-19.6c3.4-0.8,6-3.7,6.3-7.2l3.2-35h50.9l3.2,34.9c0.3,3.5,2.9,6.4,6.3,7.2c16.7,3.8,32.6,10.4,47.2,19.5
+                                                    c3,1.9,6.8,1.6,9.5-0.6l27-22.4l36,36l-22.4,26.9c-2.3,2.7-2.5,6.6-0.6,9.6c9.2,14.6,15.8,30.5,19.7,47.2c0.8,3.4,3.7,6,7.2,6.3
+                                                    l34.8,3.2v25.6c0,4.5,3.7,8.2,8.2,8.2c4.5,0,8.2-3.7,8.2-8.2v-33c0-4.2-3.2-7.7-7.4-8.1l-36.5-3.4c-3.9-14.5-9.7-28.4-17.3-41.4
+                                                    l23.4-28.2c2.7-3.2,2.5-8-0.5-11l-46.6-46.5c-3-3-7.7-3.2-11-0.5l-28.3,23.5c-13-7.5-26.9-13.3-41.3-17.1l-3.4-36.5
+                                                    c-0.4-4.2-3.9-7.4-8.1-7.4h-65.8c-4.2,0-7.7,3.2-8.1,7.4l-3.4,36.7c-14.4,3.9-28.2,9.7-41.2,17.2l-28.4-23.6
+                                                    c-3.2-2.7-8-2.5-11,0.5L84.2,84.8c-3,3-3.2,7.7-0.5,11l23.6,28.5c-7.5,13-13.2,26.8-17.1,41.2l-36.7,3.4c-4.2,0.4-7.4,3.9-7.4,8.1
+                                                    v32.8C46.1,214.2,49.7,217.9,54.3,217.9z"/>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0);" class="one-tab">
+
+                            </a>
+                            <a href="javascript:void(0);" class="one-tab">
+
+                            </a>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0);" class="center-but">
+                        Start (73)
+                    </a>
+                </div>
             </div>
 
         </div>
@@ -31,5 +86,6 @@
 
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBXqYbrFylqWV6gLhfyXobydRNy1KWZbo&callback=initMap" async defer></script>
+    <script src="https://use.fontawesome.com/35f65baac5.js"></script>
 </body>
 </html>
