@@ -67,7 +67,7 @@ body {
   padding: 0 12px;
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: 12px;
   left: 0;
 }
 .bot-cont {
@@ -84,16 +84,38 @@ body {
     background: #FFFFFF;
     width: 32%;
     height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #6F7071;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #EDEDED;
+    &.active {
+      z-index: 2;
+      color: #5093DF;
+      box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+      border-top: 1px solid #FFFFFF;
+      svg {
+        fill: currentColor;
+        color: #5093DF;
+      }
+    }
     .img-cont {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 50px;
       height: auto;
+      margin-bottom: 5px;
     }
     svg {
       width: 100%;
       height: auto;
+      fill: currentColor;
+      color: #6F7071;
     }
   }
 
@@ -101,7 +123,7 @@ body {
     background: rgba(243,246,248,0.7);
     .center-but {
       height: 48px;
-      margin: 0 5px;
+      margin: 7px 5px 0 5px;
       background: #FF6D64;
       border-radius: 3px;
       font-size: 16px;
@@ -110,6 +132,52 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    .one-tab-cont {
+      padding: 0 12px;
+      height: 250px;
+    }
+    .tabs-content {
+      background: #FFFFFF;
+      border: 1px solid #EDEDED;
+      box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+      margin-bottom: -1px;
+      position: relative;
+      z-index: 1;
+      border-radius: 3px;
+    }
+  }
+  #filter-tab {
+    .one-row {
+      height: 33%;
+      border-bottom: 1px solid #EAEAEA;
+      padding: 14px 8px;
+      display: flex;
+      &:last-child {
+        border-bottom: none;
+      }
+      .title {
+        color: #5093DF;
+        font-size: 16px;
+      }
+      .content {
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+    .img-cont {
+      height: 100%;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      svg {
+        fill: currentColor;
+        color: #6F7071;
+        width: 100%;
+      }
+
     }
   }
 }
