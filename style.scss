@@ -76,11 +76,30 @@ body {
   left: 0;
 }
 .bot-cont {
-  border: 1px solid #D3D3CC;
-  width: 100%;
-  padding: 15px 4px 7px 4px;
-  background: #FF6D64;
-
+  .tabs-cont {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+  }
+  .center-but {
+    height: 57px;
+    width: 57px;
+    background: #FF6D64;
+    border-radius: 30px;
+    border: 1px solid #D3DFE1;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+    font-size: 0;
+    display: flex;
+    margin: 0 auto;
+  }
+  .close {
+    position: absolute;
+    left: 50%;
+    top: 18px;
+    transform: translateX(-50%) rotate(-180deg);
+    color: #FFFFFF;
+    transition: all 0.2s ease;
+  }
   .tab-sel {
     display: flex;
     justify-content: space-between;
@@ -98,6 +117,7 @@ body {
     text-decoration: none;
     text-align: center;
     border: 1px solid #EDEDED;
+    position: relative;
     &.active {
       z-index: 2;
       color: #5093DF;
@@ -123,9 +143,14 @@ body {
       color: #6F7071;
     }
   }
-
   &.open {
+    .tabs-cont {
+      max-height: 400px;
+      transition: all 0.2s ease;
+    }
     background: rgba(243,246,248,0.7);
+    padding: 15px 4px 7px 4px;
+    width: 100%;
     .center-but {
       height: 48px;
       margin: 7px 5px 0 5px;
@@ -137,6 +162,8 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 100%;
+      transition: all 0.2s ease;
     }
     .one-tab-cont {
       padding: 0 12px;
@@ -150,6 +177,31 @@ body {
       position: relative;
       z-index: 1;
       border-radius: 3px;
+      height: auto;
+      width: auto;
+      overflow: visible;
+    }
+    .close {
+      color: #FE6D64;
+      font-size: 16px;
+      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+      display: block;
+      text-align: center;
+      position: absolute;
+      top: -2px;
+      left: 50%;
+      height: 5px;
+      width: 5px;
+      transform: translateX(-50%) rotate(0deg);
+      transition: all 1s ease;
+      .fa {
+        text-align: center;
+      }
+    }
+    .tab-sel {
+      height: auto;
+      width: auto;
+      overflow: visible;
     }
   }
   #filter-tab {
