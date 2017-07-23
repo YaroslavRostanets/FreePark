@@ -179,5 +179,29 @@ body {
       margin: 0 12px; }
     .bot-cont #filter-tab .day-sel a.active {
       color: #6F7071; }
+  .bot-cont #search-tab .one-row {
+    height: 25%;
+    border-bottom: 1px solid #EAEAEA;
+    padding: 14px 8px;
+    display: flex; }
+    .bot-cont #search-tab .one-row:last-child {
+      border-bottom: none; }
+    .bot-cont #search-tab .one-row .title {
+      color: #5093DF;
+      font-size: 16px; }
+    .bot-cont #search-tab .one-row .content {
+      display: flex;
+      align-items: flex-end; }
+  .bot-cont #search-tab .img-cont {
+    height: 100%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px; }
+    .bot-cont #search-tab .img-cont svg {
+      fill: currentColor;
+      color: #6F7071;
+      width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
