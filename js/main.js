@@ -10,7 +10,19 @@ $(document).ready(function(){
        $(this).addClass('active');
     });
 
-    $(".center-but").click(function(){
-        $(".bot-cont").toggleClass("open");
+    $(".center-but, .close").click(function(){
+        if($(".bot-cont").hasClass("open")){
+            $(".bot-cont").removeClass("open");
+        } else {
+            $(".bot-cont").addClass("open");
+        }
+    });
+
+    $(".menu-button").click(function(){
+       if($("#app").hasClass("open")){
+           $("#app").removeClass("open");
+       } else {
+           $("#app").addClass("open");
+       }
     });
 });

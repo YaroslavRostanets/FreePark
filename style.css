@@ -12,14 +12,69 @@ body {
 
 #app {
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  display: flex;
+  overflow: hidden; }
+  #app.open #menu {
+    margin-left: 0; }
+  #app.open .bot-cont-wrap {
+    transition: all 0.2s ease;
+    opacity: 0; }
 
 .map-page {
   height: 100%;
-  position: relative; }
+  position: relative;
+  min-width: 100vw; }
+
+#menu {
+  min-width: 82vw;
+  height: 100vh;
+  margin-left: -82vw;
+  transition: all 0.2s ease; }
+  #menu .top-part {
+    height: 110px;
+    background: #F3F6F8;
+    padding: 18px 15px;
+    border-bottom: 1px solid #CFDDE1;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1); }
+  #menu .img-cont {
+    height: 75px;
+    width: 75px;
+    border-radius: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 35px; }
+    #menu .img-cont img {
+      width: 100%;
+      height: auto; }
+  #menu .name {
+    font-size: 16px;
+    color: #5093DF; }
+  #menu .car {
+    font-size: 16px;
+    color: #5093DF; }
+  #menu .rank {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #5093DF; }
+  #menu ul {
+    list-style: none;
+    display: inline-block; }
+  #menu li {
+    width: 15px;
+    height: 15px;
+    background: #65B7FC;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; }
 
 #map {
-  height: 100%; }
+  height: 100%;
+  transition: all 0.2s ease; }
 
 .flex {
   display: flex; }
@@ -72,7 +127,8 @@ body {
   position: absolute;
   width: 100%;
   bottom: 12px;
-  left: 0; }
+  left: 0;
+  transition: all 0.2s ease; }
 
 .bot-cont .tabs-cont {
   max-height: 0px;
@@ -141,7 +197,7 @@ body {
     transition: all 0.2s ease; }
   .bot-cont.open .center-but {
     height: 48px;
-    margin: 7px 5px 0 5px;
+    margin: 7px auto 0 auto;
     background: #FF6D64;
     border-radius: 3px;
     font-size: 16px;
@@ -150,7 +206,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: calc( 100% - 10px );
     transition: all 0.2s ease; }
   .bot-cont.open .one-tab-cont {
     padding: 0 12px;
@@ -178,7 +234,7 @@ body {
     height: 5px;
     width: 5px;
     transform: translateX(-50%) rotate(0deg);
-    transition: all 1s ease; }
+    transition: all 0.2s ease; }
     .bot-cont.open .close .fa {
       text-align: center; }
   .bot-cont.open .tab-sel {
@@ -198,6 +254,16 @@ body {
   .bot-cont #filter-tab .one-row .content {
     display: flex;
     align-items: flex-end; }
+    .bot-cont #filter-tab .one-row .content .time {
+      color: #979797;
+      font-size: 18px;
+      text-decoration: none; }
+      .bot-cont #filter-tab .one-row .content .time span {
+        font-size: 16px;
+        color: rgba(151, 151, 151, 0.3); }
+        .bot-cont #filter-tab .one-row .content .time span i {
+          color: #D8D8D8;
+          font-style: normal; }
 .bot-cont #filter-tab .img-cont {
   height: 100%;
   width: 40px;
@@ -228,16 +294,48 @@ body {
 .bot-cont #search-tab .one-row {
   height: 25%;
   border-bottom: 1px solid #EAEAEA;
-  padding: 14px 8px;
-  display: flex; }
+  padding: 8px 8px;
+  display: flex;
+  position: relative; }
   .bot-cont #search-tab .one-row:last-child {
     border-bottom: none; }
   .bot-cont #search-tab .one-row .title {
     color: #5093DF;
-    font-size: 16px; }
+    font-size: 16px;
+    position: absolute;
+    top: 8px;
+    left: 65px; }
   .bot-cont #search-tab .one-row .content {
     display: flex;
-    align-items: flex-end; }
+    align-items: flex-end;
+    flex-grow: 1;
+    justify-content: center; }
+    .bot-cont #search-tab .one-row .content a {
+      text-decoration: none;
+      color: rgba(111, 112, 113, 0.1); }
+      .bot-cont #search-tab .one-row .content a:after {
+        content: "";
+        height: 17px;
+        width: 1px;
+        background: #B6B6B6;
+        display: inline-block;
+        margin: 0 12px; }
+      .bot-cont #search-tab .one-row .content a:last-child:after {
+        display: none; }
+      .bot-cont #search-tab .one-row .content a.active {
+        color: rgba(111, 112, 113, 0.8); }
+    .bot-cont #search-tab .one-row .content .time {
+      color: #979797;
+      font-size: 18px; }
+      .bot-cont #search-tab .one-row .content .time span {
+        font-size: 16px;
+        color: rgba(151, 151, 151, 0.3); }
+        .bot-cont #search-tab .one-row .content .time span i {
+          color: #D8D8D8;
+          font-style: normal; }
+.bot-cont #search-tab .dist {
+  font-size: 18px;
+  color: #6F7071; }
 .bot-cont #search-tab .img-cont {
   height: 100%;
   width: 40px;
@@ -249,5 +347,52 @@ body {
     fill: currentColor;
     color: #6F7071;
     width: 100%; }
+.bot-cont #fast-parking {
+  overflow-y: scroll; }
+  .bot-cont #fast-parking .one-row {
+    height: 25%;
+    padding: 8px;
+    border-bottom: 1px solid #EAEAEA; }
+    .bot-cont #fast-parking .one-row:last-child {
+      border-bottom: none; }
+    .bot-cont #fast-parking .one-row .content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+    .bot-cont #fast-parking .one-row .ico-time {
+      color: #5093DF;
+      position: absolute;
+      left: 19px;
+      top: 17px;
+      transform: translateX(-50%);
+      font-size: 15px; }
+  .bot-cont #fast-parking .img-cont {
+    height: 100%;
+    width: 60px;
+    position: relative; }
+    .bot-cont #fast-parking .img-cont svg {
+      height: 100%;
+      width: auto; }
+  .bot-cont #fast-parking .time {
+    list-style: none;
+    display: flex;
+    padding-left: 7px; }
+    .bot-cont #fast-parking .time li {
+      text-decoration: none;
+      color: #6F7071; }
+      .bot-cont #fast-parking .time li:after {
+        content: "";
+        display: inline-block;
+        height: 17px;
+        width: 1px;
+        background: #B6B6B6;
+        margin: 0 8px;
+        position: relative;
+        top: 4px; }
+      .bot-cont #fast-parking .time li:last-child:after {
+        display: none; }
+      .bot-cont #fast-parking .time li.holiday {
+        color: #FB0007; }
 
 /*# sourceMappingURL=style.css.map */
