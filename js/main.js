@@ -25,4 +25,8 @@ $(document).ready(function(){
            $("#app").addClass("open");
        }
     });
+
+    $("#menu").on("swipeleft",function(){
+        $("#app").removeClass("open");
+    });
 });
