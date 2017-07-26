@@ -78,12 +78,15 @@ body {
     li {
       width: 15px;
       height: 15px;
-      background: #65B7FC;
+      background: #D1D4D7;
       border: 1px solid #FFFFFF;
       color: #FFFFFF;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      &.active {
+        background: #65B7FC;
+      }
     }
   }
   ul {
@@ -143,7 +146,7 @@ body {
   }
 }
 #map {
-  height: 100%;
+  height: calc( 100% + 24px );
   transition: all 0.2s ease;
 }
 .flex {

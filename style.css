@@ -64,12 +64,14 @@ body {
     #menu .rank li {
       width: 15px;
       height: 15px;
-      background: #65B7FC;
+      background: #D1D4D7;
       border: 1px solid #FFFFFF;
       color: #FFFFFF;
       display: inline-flex;
       align-items: center;
       justify-content: center; }
+      #menu .rank li.active {
+        background: #65B7FC; }
   #menu ul {
     list-style: none;
     display: inline-block; }
@@ -118,7 +120,7 @@ body {
       color: #5093DF; }
 
 #map {
-  height: 100%;
+  height: calc( 100% + 24px );
   transition: all 0.2s ease; }
 
 .flex {
