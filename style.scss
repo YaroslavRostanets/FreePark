@@ -46,6 +46,9 @@ body {
     border-bottom: 1px solid #CFDDE1;
     box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
   }
+  .menu-content {
+    padding: 0 10px;
+  }
   .img-cont {
     height: 75px;
     width: 75px;
@@ -72,20 +75,71 @@ body {
     font-size: 13px;
     margin-top: 10px;
     color: #5093DF;
+    li {
+      width: 15px;
+      height: 15px;
+      background: #65B7FC;
+      border: 1px solid #FFFFFF;
+      color: #FFFFFF;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
   ul {
     list-style: none;
     display: inline-block;
   }
-  li {
-    width: 15px;
-    height: 15px;
-    background: #65B7FC;
-    border: 1px solid #FFFFFF;
-    color: #FFFFFF;
-    display: inline-flex;
+  .profile {
+    height: 80px;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    color: #5093DF;
+    .img-cont {
+      height: 30px;
+      width: 30px;
+      margin-left: 12px;
+      margin-right: 20px;
+    }
+    svg {
+      height: 100%;
+      width: auto;
+      fill: currentColor;
+      color: #5093DF;
+    }
+  }
+  .item {
+    height: 50px;
+    color: #5093DF;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  .middle-menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 13px 0;
+    li {
+      width: 100%;
+      height: 60px;
+      align-items: center;
+      color: #5093DF;
+    }
+    .img-cont {
+      width: 30px;
+      height: 30px;
+      margin-left: 12px;
+      margin-right: 20px;
+      border-radius: 0;
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: currentColor;
+      color: #5093DF;
+    }
+    border-bottom: 1px solid #F0F0F0;
+    border-top: 1px solid #F0F0F0;
   }
 }
 #map {
@@ -125,20 +179,6 @@ body {
   width: 100%;
   padding: 0 12px;
 }
-/*
-.center-but {
-  height: 56px;
-  width: 56px;
-  border: 1px solid #D3DFE1;
-  border-right: 30px;
-  background: #FF6D64;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  margin-left: -28px;
-  border-radius: 30px;
-}
-*/
 .bot-cont-wrap {
   padding: 0 12px;
   position: absolute;
